@@ -88,3 +88,29 @@ PKI is a framework of hardware, software, policies, and procedures that manage d
   - TLS handshake failures
   - Untrusted or self-signed certificates
 - PKI is critical for HTTPS, VPNs, secure email, and code signing.
+
+## Encrypting Data
+
+### Symmetric Encryption
+- One key for encryption and decryption
+- Very fast, used for bulk data
+- Examples: AES, DES, 3DES, Blowfish
+
+### Asymmetric Encryption
+- Public key encrypts, private key decrypts
+- Slower, used for key exchange and digital signatures
+- Examples: RSA, ECC
+
+### Hybrid Encryption
+- Combines symmetric + asymmetric
+- Example: TLS/SSL uses asymmetric to exchange a symmetric session key, then switches to symmetric for speed
+
+### Data States
+- **Data at Rest:** Stored files (disk encryption, BitLocker, LUKS)
+- **Data in Transit:** Network traffic (TLS, VPNs, SSH)
+- **Data in Use:** Active memory (protected by CPU-level technologies)
+
+**SOC Relevance:**
+- Monitor for expired TLS certificates and weak ciphers in logs
+- Detect unusual encrypted traffic (possible data exfiltration)
+- Ensure encryption policies align with compliance requirements
