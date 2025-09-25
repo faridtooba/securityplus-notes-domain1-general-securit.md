@@ -14,3 +14,27 @@
 - Honeypot alerts can act as early-warning systems for attacker presence.
 - Sinkhole logs help identify infected devices calling out to malicious domains.
 - Disruption techniques are common in incident response playbooks.
+
+## Change Management
+
+### Definition
+Change management is a structured approach to ensure system changes are reviewed, tested, approved, and documented before being implemented.
+
+### Key Steps
+1. **Request for Change (RFC):** Submit change proposal.
+2. **Review/Approval:** Evaluate risks, business impact, and security concerns.
+3. **Testing:** Simulate in staging or test environment.
+4. **Implementation:** Apply during maintenance/change window.
+5. **Documentation:** Record all changes.
+6. **Review/Closure:** Confirm success, rollback if needed.
+
+### Example Changes
+- Adding new firewall rules
+- Applying security patches
+- Updating SIEM software
+- Deploying new VPN configurations
+
+**SOC Relevance:**
+- Helps SOC analysts distinguish between expected vs. unexpected alerts.
+- Reduces risk of downtime or misconfiguration leading to vulnerabilities.
+- Provides audit trail for investigations.
