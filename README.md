@@ -64,3 +64,27 @@ Technical change management ensures that updates to systems, networks, and secur
 - Prevents false positives (e.g., new firewall rule causing unusual traffic).
 - Provides accountability and reduces misconfiguration risks.
 
+## Public Key Infrastructure (PKI)
+
+### Definition
+PKI is a framework of hardware, software, policies, and procedures that manage digital certificates and public-key encryption.
+
+### Core Components
+- **Certificate Authority (CA):** Issues trusted certificates.
+- **Registration Authority (RA):** Verifies identities before certs are issued.
+- **Certificates:** Bind a public key to an entity (user, server, org).
+- **CRL (Certificate Revocation List):** Maintains list of revoked certs.
+- **OCSP (Online Certificate Status Protocol):** Provides real-time cert validation.
+- **Key Escrow / Recovery Agent:** Holds backup keys for recovery.
+
+### Certificate Types
+- **Root CA** – the top of the trust chain
+- **Intermediate CA** – links the root to end-entity certs
+- **End-Entity Certificates** – used by servers or users (e.g., HTTPS, email)
+
+### SOC Relevance
+- Analysts monitor logs for:
+  - Expired or revoked certificates
+  - TLS handshake failures
+  - Untrusted or self-signed certificates
+- PKI is critical for HTTPS, VPNs, secure email, and code signing.
