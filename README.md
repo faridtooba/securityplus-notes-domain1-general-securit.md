@@ -172,3 +172,35 @@ Obfuscation is the practice of making code or data more difficult to read, under
 - SIEM alerts often detect obfuscated scripts in PowerShell logs.
 - Malware analysts investigate obfuscated payloads during incident response.
 - Data obfuscation is also used defensively to protect sensitive fields in logs.
+
+## Hashing and Digital Signatures
+
+### Hashing
+- One-way mathematical function → produces fixed-length digest
+- Ensures **integrity**: changes in input = different hash
+- Algorithms:
+  - MD5: fast but broken
+  - SHA-1: deprecated
+  - SHA-256 / SHA-3: secure and widely used
+
+### Digital Signatures
+- Combines hashing with asymmetric encryption
+- Process:
+  1. Sender hashes the message
+  2. Sender encrypts hash with private key (signature)
+  3. Receiver decrypts signature with sender’s public key
+  4. Receiver re-hashes message and compares
+- Provides:
+  - **Integrity**
+  - **Authentication**
+  - **Non-repudiation**
+
+### Common Uses
+- Email signing (S/MIME, PGP)
+- Software/code signing
+- TLS certificates
+
+**SOC Relevance:**
+- Analysts validate file and log integrity using hashes
+- Digital signatures are checked in SIEM for invalid or self-signed certificates
+- Threat hunting often includes comparing file hashes against malware databases
