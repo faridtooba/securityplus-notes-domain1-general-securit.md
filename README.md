@@ -228,3 +228,36 @@ A distributed ledger that records transactions in blocks, which are linked toget
 - Integrity verification concepts in blockchain overlap with forensic log analysis
 - Useful for tracking crypto-related threats (fraud, ransomware payments)
 - May support immutable SOC log storage in the future
+
+## Certificates
+
+### Definition
+A certificate is a digital document issued by a Certificate Authority (CA) that binds a public key to an identity (organization, server, or user).
+
+### Structure
+- Public key of the subject
+- Subject details (domain, org, person)
+- Issuer (CA)
+- Validity period (start & end dates)
+- Serial number
+- CA’s digital signature
+
+### Types of Certificates
+- **Root Certificate:** Top of the trust chain, self-signed
+- **Intermediate Certificate:** Links root to end-entity certs
+- **End-Entity Certificate:** Used by servers/websites/users (e.g., HTTPS, email)
+- **Wildcard Certificate:** Covers all subdomains (*.example.com)
+- **SAN Certificate:** Supports multiple domain names in one certificate
+- **Code-Signing Certificate:** Proves authenticity of software
+- **Email Certificate:** Supports S/MIME email encryption/signing
+
+### Lifecycle
+1. CSR (Certificate Signing Request)
+2. Issuance by CA
+3. Installation
+4. Renewal or revocation (via CRL or OCSP)
+
+**SOC Relevance:**
+- Monitor SIEM logs for expired, revoked, or self-signed certs
+- Investigate TLS handshake errors caused by certificate issues
+- Detect malware using invalid or forged certificates
