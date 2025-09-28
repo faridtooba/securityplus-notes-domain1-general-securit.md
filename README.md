@@ -156,3 +156,19 @@ Key exchange is the process of securely distributing encryption keys between par
 - SIEM alerts on TLS handshake failures, expired certs
 - IDS/IPS monitoring for weak protocols (e.g., WEP, SSLv2)
 - Compliance checks for encrypted databases, VPN logs, and secure email policies
+
+## Obfuscation
+
+### Definition
+Obfuscation is the practice of making code or data more difficult to read, understand, or reverse-engineer without altering its functionality.
+
+### Examples
+- **Code Obfuscation:** Making source code harder to analyze.
+- **Malware Obfuscation:** Attackers hide payloads in PowerShell or JavaScript.
+- **Data Obfuscation:** Masking sensitive information (e.g., credit card numbers).
+- **Comparison:** Encryption protects confidentiality with keys; obfuscation only adds complexity.
+
+**SOC Relevance:**
+- SIEM alerts often detect obfuscated scripts in PowerShell logs.
+- Malware analysts investigate obfuscated payloads during incident response.
+- Data obfuscation is also used defensively to protect sensitive fields in logs.
