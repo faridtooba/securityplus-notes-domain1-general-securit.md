@@ -136,3 +136,23 @@ Key exchange is the process of securely distributing encryption keys between par
 - Key exchange errors show up in SIEM logs (TLS handshake failures, VPN tunnel drops).
 - Analysts flag deprecated methods (e.g., weak DH groups).
 - Secure key exchange is critical for confidentiality in data in transit.
+
+## Encryption Technologies
+
+### Data at Rest
+- **Full-Disk Encryption (FDE):** BitLocker, FileVault, LUKS
+- **Database Encryption:** Protects sensitive records
+
+### Data in Transit
+- **TLS/SSL:** Protects HTTPS, VPNs, email
+- **VPN Encryption:** IPSec, SSL VPNs
+- **Wireless Encryption:** WPA3, WPA2 (legacy), WEP (deprecated)
+
+### Email Encryption
+- **S/MIME:** Uses PKI for encryption and digital signatures
+- **PGP/GPG:** Uses Web of Trust for secure communications
+
+**SOC Relevance:**
+- SIEM alerts on TLS handshake failures, expired certs
+- IDS/IPS monitoring for weak protocols (e.g., WEP, SSLv2)
+- Compliance checks for encrypted databases, VPN logs, and secure email policies
