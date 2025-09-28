@@ -114,3 +114,25 @@ PKI is a framework of hardware, software, policies, and procedures that manage d
 - Monitor for expired TLS certificates and weak ciphers in logs
 - Detect unusual encrypted traffic (possible data exfiltration)
 - Ensure encryption policies align with compliance requirements
+
+## Key Exchange
+
+### Definition
+Key exchange is the process of securely distributing encryption keys between parties.
+
+### Methods
+- **In-Band Exchange:** Keys shared over the same communication channel (less secure).
+- **Out-of-Band Exchange:** Keys shared separately (e.g., phone + email).
+- **Asymmetric Exchange:** Uses public/private key pairs (RSA, ECC).
+- **Diffie-Hellman (DH/ECDH):** Mathematical algorithm to establish a shared key over insecure channels.
+
+### Example: TLS Handshake
+1. Client connects to server (HTTPS).
+2. Server sends public key in its certificate.
+3. Client generates session key, encrypts it with server’s public key.
+4. Server decrypts with private key → both share symmetric session key.
+
+**SOC Relevance:**
+- Key exchange errors show up in SIEM logs (TLS handshake failures, VPN tunnel drops).
+- Analysts flag deprecated methods (e.g., weak DH groups).
+- Secure key exchange is critical for confidentiality in data in transit.
