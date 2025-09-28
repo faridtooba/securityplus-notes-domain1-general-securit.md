@@ -204,3 +204,27 @@ Obfuscation is the practice of making code or data more difficult to read, under
 - Analysts validate file and log integrity using hashes
 - Digital signatures are checked in SIEM for invalid or self-signed certificates
 - Threat hunting often includes comparing file hashes against malware databases
+
+## Blockchain Technology
+
+### Definition
+A distributed ledger that records transactions in blocks, which are linked together using cryptographic hashes.
+
+### Key Concepts
+- **Blocks:** Store transaction data + previous block hash + timestamp
+- **Hash Linking:** Each block references the previous block, making the chain tamper-resistant
+- **Consensus Mechanisms:**
+  - Proof of Work (PoW) – miners solve puzzles (e.g., Bitcoin)
+  - Proof of Stake (PoS) – validators stake tokens (e.g., Ethereum 2.0)
+- **Decentralization:** No single central authority
+- **Immutability:** Once recorded, data cannot be altered without detection
+
+### Security Benefits
+- Ensures **integrity** via hashing
+- Provides **non-repudiation** by permanent logging
+- Enables transparent, auditable trails
+
+**SOC Relevance:**
+- Integrity verification concepts in blockchain overlap with forensic log analysis
+- Useful for tracking crypto-related threats (fraud, ransomware payments)
+- May support immutable SOC log storage in the future
